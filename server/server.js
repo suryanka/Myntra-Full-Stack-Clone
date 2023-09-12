@@ -10,7 +10,7 @@ import DefaultData from "./default.js";
 const app= express();
 
 const corsOptions = {
-    origin:["https://myntra-full-stack-clone-frontend.vercel.app/",'https://api.razorpay.com'],
+    origin:["https://myntra-full-stack-clone-frontend.vercel.app/",'https://api.razorpay.com','https://myntra-full-stack-clone-backend.vercel.app'],
         //'https://myntra-full-stack-clone-frontend.vercel.app', 
         
   methods: ["POST", "GET"],
@@ -26,7 +26,8 @@ app.use('/',router);
 app.use(express.json({ extended: false }));
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://myntra-full-stack-clone-frontend.vercel.app');
+  res.setHeader('Access-Control-Allow-Origin', ['https://myntra-full-stack-clone-frontend.vercel.app',
+                                                'https://myntra-full-stack-clone-backend.vercel.app']);
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
