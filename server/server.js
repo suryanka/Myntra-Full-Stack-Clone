@@ -10,7 +10,7 @@ import DefaultData from "./default.js";
 const app= express();
 
 const corsOptions = {
-    origin: ["http://localhost:3000",'https://api.razorpay.com'],
+    origin: ["https://myntra-full-stack-clone-frontend.vercel.app",'https://api.razorpay.com'],
     credentials: true,
     //access-control-allow-credentials:true
     optionSuccessStatus: 200,
