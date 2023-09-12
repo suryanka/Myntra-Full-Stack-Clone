@@ -3,7 +3,7 @@ import router from "./Router/routes.js";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from 'dotenv';
-import { connection } from "./Database/db.js";
+import  connection  from "./Database/db.js";
 import DefaultData from "./default.js";
 
 
