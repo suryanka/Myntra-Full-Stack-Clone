@@ -11,6 +11,7 @@ const app= express();
 
 const corsOptions = {
     origin: ["https://myntra-full-stack-clone-frontend.vercel.app",'https://api.razorpay.com'],
+  methods: ["POST", "GET"],
     credentials: true,
     //access-control-allow-credentials:true
     optionSuccessStatus: 200,
