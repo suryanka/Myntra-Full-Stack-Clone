@@ -3,7 +3,7 @@ import Product from "./Model/product-schema.js";
 
 const DefaultData = async () => {
     try {
-        await Product.deleteMany({});
+        // await Product.deleteMany({});
         await Product.insertMany(products);
         console.log("Default data inserted successsfully");
     }
