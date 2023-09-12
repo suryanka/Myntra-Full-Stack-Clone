@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as actionTypes from "../Constants/BagConstant";
 
-const url = "https://vercel.com/suryanka/myntra-full-stack-clone-backend";
+const url = "https://myntra-full-stack-clone-backend.vercel.app/";
 
 export const addToCart = (id, quantity) => async (dispatch) => {
   try {
