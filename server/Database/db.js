@@ -12,3 +12,4 @@ export const connection = async (url) => {
     console.log(`Error while connecting to DB is: ${error.message}`);
   }
 };
+export default connection;
