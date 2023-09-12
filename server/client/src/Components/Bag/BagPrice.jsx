@@ -30,7 +30,7 @@ function BagPrice({ cartItems }) {
 
   //
   
-  const url= 'http://localhost:8000';
+  const url= 'https://vercel.com/suryanka/myntra-full-stack-clone-backend';
 const logo='https://static.toiimg.com/thumb/msid-95055581,width-400,resizemode-4/95055581.jpg';
  function loadScript(src) {
   return new Promise((resolve) => {
