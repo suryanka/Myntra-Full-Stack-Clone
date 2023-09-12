@@ -22,7 +22,7 @@ const Image= styled('img')(({theme})=> ({
 function Slide({ products }) {
   return (
     <Container>
-      {products.map((product) => (
+      {products && products.map((product) => (
         <Link to= {`products/${product.id}`}
         style={{textDecoration: 'none', color:'inherit'}}>
         <ProductContainer>
