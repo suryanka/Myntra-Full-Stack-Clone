@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url= 'http://localhost:8000';
+const url= 'https://vercel.com/suryanka/myntra-full-stack-clone-backend';
 
 export const authenticateLogin= async (data)=> {
 
