@@ -9,29 +9,29 @@ import DefaultData from "./default.js";
 
 const app= express();
 
-// const corsOptions = {
-//     origin:["https://myntra-full-stack-clone-frontend.vercel.app",'https://api.razorpay.com','https://myntra-full-stack-clone-backend.vercel.app'],
-//         //'https://myntra-full-stack-clone-frontend.vercel.app', 
+const corsOptions = {
+    origin:["https://myntra-full-stack-clone-frontend.vercel.app",'https://api.razorpay.com','https://myntra-full-stack-clone-backend.vercel.app'],
+        //'https://myntra-full-stack-clone-frontend.vercel.app', 
         
-//   methods: ["POST", "GET"],
-//     credentials: true,
-//     //access-control-allow-credentials:true
-//     optionSuccessStatus: 200,
-//   };
+  methods: ["POST", "GET"],
+    credentials: true,
+    //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+  };
 dotenv.config();
-// app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/',router);
 app.use(express.json({ extended: false }));
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', ['https://myntra-full-stack-clone-frontend.vercel.app',
-                                                'https://myntra-full-stack-clone-backend.vercel.app']);
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', ['https://myntra-full-stack-clone-frontend.vercel.app',
+//                                                 'https://myntra-full-stack-clone-backend.vercel.app']);
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//   next();
+// });
 
 // app.get('/products', (req, res) => {
 //   // ... your logic ...
