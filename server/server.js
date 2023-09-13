@@ -19,7 +19,7 @@ const corsOptions = {
     optionSuccessStatus: 200,
   };
 dotenv.config();
-app.use(cors(corsOptions))
+app.use('*',cors(corsOptions))
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/',router);
