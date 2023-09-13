@@ -33,6 +33,15 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/products', (req, res) => {
+  // ... your logic ...
+  res.setHeader('Access-Control-Allow-Origin', 'https://myntra-full-stack-clone-frontend.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  
+  // ... send your response ...
+});
+
 const username= process.env.MONGO_USERNAME;
 const password= process.env.MONGO_PASSWORD;
 const url = `mongodb+srv://${username}:${password}@myntra-clone.5bpuxfp.mongodb.net/?retryWrites=true&w=majority
