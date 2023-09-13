@@ -10,7 +10,7 @@ import DefaultData from "./default.js";
 const app= express();
 
 const corsOptions = {
-    origin:["https://myntra-full-stack-clone-frontend.vercel.app/",'https://api.razorpay.com','https://myntra-full-stack-clone-backend.vercel.app/'],
+    origin:["https://myntra-full-stack-clone-frontend.vercel.app",'https://api.razorpay.com','https://myntra-full-stack-clone-backend.vercel.app'],
         //'https://myntra-full-stack-clone-frontend.vercel.app', 
         
   methods: ["POST", "GET"],
