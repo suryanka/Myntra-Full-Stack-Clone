@@ -25,13 +25,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/',router);
 app.use(express.json({ extended: false }));
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', ['https://myntra-full-stack-clone-frontend.vercel.app',
-                                                'https://myntra-full-stack-clone-backend.vercel.app']);
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', ['https://myntra-full-stack-clone-frontend.vercel.app',
+//                                                 'https://myntra-full-stack-clone-backend.vercel.app']);
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//   next();
+// });
 
 const username= process.env.MONGO_USERNAME;
 const password= process.env.MONGO_PASSWORD;
