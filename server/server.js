@@ -39,6 +39,11 @@ const url = `mongodb+srv://${username}:${password}@myntra-clone.5bpuxfp.mongodb.
 `;
 
 connection(url);
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+}
+
 const port = process.env.port || 8000;
 
 app.listen(port, ()=> {
